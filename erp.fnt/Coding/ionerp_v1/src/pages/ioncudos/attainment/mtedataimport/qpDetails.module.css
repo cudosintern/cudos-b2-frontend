@@ -1,0 +1,175 @@
+/* ─── Modal Layout ───────────────────────────────────────────── */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1050; /* Ensure it stays above OccasionsModal (1000) */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalContent {
+  width: min(960px, 96vw);
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.modalBody {
+  overflow-y: auto;
+  flex: 1;
+  padding: 16px;
+  background-color: #f8f9fa; /* slightly off-white for depth */
+}
+
+/* ─── Headers ──────────────────────────────────────────────── */
+.darkHeader {
+  background-color: transparent;
+  color: #417a80;
+  padding: 16px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  flex-shrink: 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.subDarkHeader {
+  background-color: transparent;
+  color: #417a80;
+  padding: 16px 0;
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 24px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* ─── Metadata Strip ───────────────────────────────────────── */
+.metadataStrip {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  font-size: 13px;
+  color: #333;
+}
+
+.metadataCenter {
+  text-align: center;
+}
+
+/* ─── Paper Tables ─────────────────────────────────────────── */
+.paperContainer {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  margin-bottom: 24px;
+}
+
+.dataTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.th {
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+  font-weight: 600;
+  color: #333;
+}
+
+.td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  color: #333;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.sectionRow {
+  background-color: #dfdfdf;
+  font-weight: bold;
+}
+
+.footerRow {
+  background-color: #ffffff;
+  font-weight: bold;
+}
+
+/* ─── Distribution Split ───────────────────────────────────── */
+.distributionContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.chartSide {
+  flex: 1;
+  min-width: 300px;
+  border: 1px solid #ddd;
+  background-color: #ffffff;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tableSide {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+}
+
+/* ─── Notes ────────────────────────────────────────────────── */
+.notesContainer {
+  border: 1px solid #ddd;
+  background-color: #ffffff;
+  padding: 12px;
+  margin-top: 16px;
+  font-size: 12px;
+  color: #444;
+  line-height: 1.6;
+}
+
+.notesTitle {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* ─── Footer ───────────────────────────────────────────────── */
+.modalFooter {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 14px;
+  border-top: 1px solid #e5e7eb;
+  background-color: #ffffff;
+  flex-shrink: 0;
+}
+
+.closeBtn {
+  background-color: #d9534f;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.closeBtn:hover {
+  background-color: #c9302c;
+}

@@ -1,0 +1,305 @@
+/* CIA QP AND RUBRICS STYLESHEET - PREMIUM LAYOUT ALIGNED WITH CIA MODULE */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --primary-cia: #4a8494;
+    --primary-cia-hover: #3d6d7a;
+    --primary-cia-light: #f0f9ff;
+    --primary-cia-border: #e0f2fe;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --bg-main: #f8fafc;
+    --border-subtle: #e2e8f0;
+}
+
+.cia-container {
+    padding: 1.5rem;
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--text-main);
+    background-color: var(--bg-main);
+    min-height: 100vh;
+}
+
+/* Header Typography */
+.cia-page-title {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    color: var(--primary-cia);
+    margin-bottom: 0.25rem;
+}
+
+.cia-page-subtitle {
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+.cia-header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Section Bars */
+.cia-section-bar {
+    background: var(--primary-cia-light);
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--primary-cia-border);
+}
+
+.cia-section-title {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    color: var(--primary-cia);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Cards */
+.cia-card {
+    background: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    border: 1px solid var(--border-subtle);
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+}
+
+/* Form Controls */
+.cia-filter-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: white;
+}
+
+.cia-filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.cia-label {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+}
+
+.cia-select, .cia-input {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    width: 100%;
+    background-color: white;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cia-select:focus, .cia-input:focus {
+    outline: none;
+    border-color: var(--primary-cia);
+    box-shadow: 0 0 0 3px rgba(74, 132, 148, 0.1);
+}
+
+.cia-select:disabled, .cia-input:disabled {
+    background-color: #f3f4f6;
+    cursor: not-allowed;
+}
+
+/* Buttons */
+.cia-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.25rem;
+    border-radius: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+}
+
+.cia-btn-primary {
+    background-color: var(--primary-cia);
+    color: white;
+}
+
+.cia-btn-primary:hover {
+    background-color: var(--primary-cia-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.cia-btn-outline {
+    background-color: white;
+    color: #4b5563;
+    border: 1px solid #d1d5db;
+}
+
+.cia-btn-outline:hover {
+    background-color: #f9fafb;
+    border-color: #9ca3af;
+}
+
+.cia-btn-red {
+    background-color: #ef4444;
+    color: white;
+}
+
+.cia-btn-red:hover {
+    background-color: #dc2626;
+}
+
+/* Table Design */
+.cia-table-container {
+    background: white;
+    border: 1px solid var(--border-subtle);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+.cia-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8125rem;
+}
+
+.cia-table th {
+    background-color: #f8fafc;
+    color: #475569;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.cia-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #f1f5f9;
+    color: #334155;
+    vertical-align: middle;
+}
+
+.cia-table tbody tr:hover {
+    background-color: #fcfcfc;
+}
+
+.cia-action-link {
+    color: var(--primary-cia);
+    font-weight: 600;
+    font-size: 0.75rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.cia-action-link:hover {
+    text-decoration: underline;
+    color: var(--primary-cia-hover);
+}
+
+/* Badges */
+.q-badge {
+    padding: 0.25rem 0.625rem;
+    border-radius: 9999px;
+    font-size: 0.625rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+}
+
+.q-badge-blue { background: #f0f9ff; color: #0369a1; border: 1px solid #e0f2fe; }
+.q-badge-emerald { background: #ecfdf5; color: #047857; border: 1px solid #d1fae5; }
+.q-badge-amber { background: #fffbeb; color: #b45309; border: 1px solid #fef3c7; }
+
+/* Unit Section */
+.unit-container {
+    background: white;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.unit-header-premium {
+    background: #f8fafc;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.cia-section-bar-dark {
+    background: #1e293b;
+    padding: 0.625rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 9999px;
+    margin: 0.75rem 0.5rem;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.cia-section-bar-dark .cia-section-title {
+    color: white;
+    font-size: 0.8125rem;
+    font-weight: 800;
+}
+
+.cia-info-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    padding: 1rem 1.75rem;
+    background: white;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.cia-info-item {
+    display: flex;
+    gap: 0.75rem;
+    font-size: 0.75rem;
+}
+
+.cia-info-label {
+    font-weight: 800;
+    color: #475569;
+}
+
+.cia-info-value {
+    font-weight: 700;
+    color: #2563eb;
+}
+
+/* Utility */
+.animate-fade-in {
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.required {
+    color: #ef4444;
+    margin-left: 2px;
+}

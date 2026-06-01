@@ -1,0 +1,91 @@
+/* CiaDataImport.css */
+
+.cce-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.cce-badge-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.cce-badge-completed {
+  background-color: #dcfce7;
+  color: #166534;
+}
+.cce-badge-completed .cce-badge-dot {
+  background-color: #22c55e;
+}
+
+.cce-badge-inprogress {
+  background-color: #dcfce7;
+  color: #166534;
+}
+.cce-badge-inprogress .cce-badge-dot {
+  background-color: #22c55e;
+}
+
+.cce-badge-pending {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+.cce-badge-pending .cce-badge-dot {
+  background-color: #9ca3af;
+}
+
+.cce-link-btn {
+  background: transparent;
+  border: none;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  transition: all 0.2s;
+}
+
+.cce-link-btn:hover {
+  text-decoration: underline;
+}
+
+.cce-link-btn-blue {
+  color: #0070c0;
+}
+.cce-link-btn-green {
+  color: #166534;
+}
+.cce-link-btn-violet {
+  color: #6d28d9;
+}
+
+.cce-table-scroll {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.cce-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.animate-page-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

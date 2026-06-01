@@ -1,0 +1,21 @@
+.accordion-content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 300ms ease-out;
+    overflow: hidden;
+}
+
+.accordion-content.open {
+    grid-template-rows: 1fr;
+}
+
+.accordion-inner {
+    min-height: 0;
+}
+
+.info-text {
+    font-size: 13px;
+    color: #555;
+    padding: 8px 12px;
+    background-color: #f9f9f9;
+}

@@ -1,0 +1,162 @@
+/* ─── Shared empty / loading state ───────────────────────────── */
+.stateText {
+  padding: 1.5rem;
+  text-align: center;
+  color: #666;
+  font-size: 13px;
+}
+
+/* ─── Modal Overlay ───────────────────────────────────────────── */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ─── Modal Container ─────────────────────────────────────────── */
+.modalContent {
+  width: min(820px, 94vw);
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.28);
+}
+
+/* ─── Section Header ─────────────────────────────────────── */
+.occasionsHeader {
+  background-color: transparent;
+  color: #417a80;
+  padding: 16px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  flex-shrink: 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* ─── Course Context Line ─────────────────────────────────────── */
+.courseContextLine {
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 14px;
+  font-size: 14px;
+  color: #333;
+  flex-shrink: 0;
+}
+
+/* ─── Scrollable Body ─────────────────────────────────────────── */
+.occasionsBody {
+  overflow-y: auto;
+  flex: 1;
+  padding: 12px 14px;
+}
+
+/* ─── Table ───────────────────────────────────────────────────── */
+.occasionsTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.th {
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  padding: 8px 10px;
+  text-align: left;
+  font-weight: 600;
+  color: #333;
+  white-space: nowrap;
+}
+
+.td {
+  border: 1px solid #ddd;
+  padding: 8px 10px;
+  color: #333;
+  vertical-align: middle;
+}
+
+.rowEven {
+  background-color: #ffffff;
+}
+
+.rowOdd {
+  background-color: #f9f9f9;
+}
+
+/* ─── Links ───────────────────────────────────────────────────── */
+.link {
+  color: #007bff;
+  text-decoration: none;
+  cursor: pointer;
+  margin-right: 4px;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.rubricsMuted {
+  color: #007bff;
+  font-size: 13px;
+  cursor: default;
+}
+
+.qpDefinedText {
+  color: #0000FF; /* Pure blue matching the screenshot */
+  font-size: 13px;
+  cursor: default;
+  font-weight: 500;
+}
+
+/* ─── Footer ──────────────────────────────────────────────────── */
+.occasionsFooter {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 14px;
+  border-top: 1px solid #e5e7eb;
+  flex-shrink: 0;
+}
+
+.closeBtn {
+  background-color: #d9534f;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.closeBtn:hover {
+  background-color: #c9302c;
+}
+
+/* ─── Legacy status badge styles (kept for DataTable cell renderers) */
+.statusLabel {
+  display: inline-block;
+  padding: 0.125rem 0.5rem;
+  border: 1px solid;
+  border-radius: 0.125rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+}
+
+.statusInProgress {
+  color: #166534;
+  background: #dcfce7;
+  border-color: #bbf7d0;
+}
+
+.statusCompleted {
+  color: #166534;
+  background: #dcfce7;
+  border-color: #bbf7d0;
+}
