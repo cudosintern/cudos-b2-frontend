@@ -1,0 +1,67 @@
+/* POPPER */
+.designation-year-popper {
+  z-index: 999999 !important;
+}
+
+/* MAIN CALENDAR */
+.designation-year-calendar {
+  opacity: 1 !important;
+  background: #fff !important;
+  border: 1px solid #d1d5db !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
+  font-size: 14px;
+}
+
+/* REMOVE TRANSPARENT BACKGROUND */
+.react-datepicker {
+  opacity: 1 !important;
+  background-color: #fff !important;
+}
+
+/* HEADER */
+.designation-year-calendar .react-datepicker__header {
+  background: #fff !important;
+  border-bottom: 1px solid #e5e7eb !important;
+}
+
+/* YEAR GRID */
+.designation-year-calendar .react-datepicker__year-wrapper {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  padding: 12px;
+  max-width: 240px;
+  background: #fff !important;
+}
+
+/* YEAR BUTTON */
+.designation-year-calendar .react-datepicker__year-text {
+  width: 100%;
+  margin: 0 !important;
+  padding: 8px 0;
+  border-radius: 6px;
+  text-align: center;
+  background: #fff !important;
+}
+
+/* HOVER */
+.designation-year-calendar .react-datepicker__year-text:hover {
+  background: #4f7f82 !important;
+  color: #fff !important;
+}
+
+/* SELECTED */
+.designation-year-calendar .react-datepicker__year-text--selected {
+  background: #2563eb !important;
+  color: #fff !important;
+}
+
+/* REMOVE TRIANGLE */
+.react-datepicker__triangle {
+  display: none !important;
+}
+
+/* NAVIGATION */
+.designation-year-calendar .react-datepicker__navigation-icon::before {
+  border-color: #000 !important;
+}

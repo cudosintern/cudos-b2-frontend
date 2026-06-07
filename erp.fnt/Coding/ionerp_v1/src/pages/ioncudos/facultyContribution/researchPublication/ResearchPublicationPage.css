@@ -1,0 +1,46 @@
+/* Increase spacing between month items */
+.react-datepicker__month-wrapper {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px; /* increase space */
+}
+
+/* Style each month */
+.react-datepicker__month-text {
+  padding: 12px 0 !important;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Popup padding */
+.react-datepicker {
+  padding: 12px;
+}
+
+/* Make left/right arrows BLACK */
+.react-datepicker__navigation-icon::before {
+  border-color: black !important;
+}
+
+/* Optional: make arrow button background clean */
+.react-datepicker__navigation {
+  top: 10px;
+}
+
+/* Optional: hover effect */
+.react-datepicker__navigation:hover *::before {
+  border-color: #000 !important;
+}
+
+button {
+  position: relative;
+  z-index: 10;
+}
+
+.tox-tinymce {
+  z-index: 0 !important;
+}
+
+.react-datepicker-popper {
+  z-index: 5 !important;
+}

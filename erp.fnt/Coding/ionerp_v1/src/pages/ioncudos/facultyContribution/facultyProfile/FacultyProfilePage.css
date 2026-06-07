@@ -1,0 +1,92 @@
+/* Popup above everything */
+.react-datepicker-popper {
+  z-index: 999999 !important;
+}
+
+/* Main calendar */
+.react-datepicker {
+  z-index: 999999 !important;
+  background: white !important;
+  opacity: 1 !important;
+  position: relative;
+}
+
+/* Prevent transparency */
+.react-datepicker__triangle {
+  display: none;
+}
+
+/* Header */
+.year-picker-calendar .react-datepicker__header {
+  background: white !important;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Year grid */
+.year-picker-calendar .react-datepicker__year-wrapper {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  padding: 10px;
+  background: white !important;
+}
+
+/* Year button */
+.year-picker-calendar .react-datepicker__year-text {
+  width: 100%;
+  padding: 8px 0;
+  border-radius: 6px;
+  text-align: center;
+  background: white !important;
+}
+
+/* Hover */
+.year-picker-calendar .react-datepicker__year-text:hover {
+  background: #4f7f82 !important;
+  color: white !important;
+}
+
+/* Selected */
+.year-picker-calendar .react-datepicker__year-text--selected {
+  background: #2563eb !important;
+  color: white !important;
+}
+
+/* Navigation arrows */
+.year-picker-calendar .react-datepicker__navigation-icon::before {
+  border-color: black !important;
+}
+
+/* Popup wrapper */
+.designation-year-popper {
+  z-index: 999999 !important;
+}
+
+/* Full calendar */
+.designation-year-calendar {
+  background: #ffffff !important;
+  opacity: 1 !important;
+  border: 1px solid #d1d5db !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+  position: relative;
+}
+
+/* Header */
+.designation-year-calendar .react-datepicker__header {
+  background: #ffffff !important;
+}
+
+/* Year section */
+.designation-year-calendar .react-datepicker__year-wrapper {
+  background: #ffffff !important;
+}
+
+/* Individual year buttons */
+.designation-year-calendar .react-datepicker__year-text {
+  background: #ffffff !important;
+}
+
+/* Remove transparent triangle */
+.designation-year-calendar .react-datepicker__triangle {
+  display: none !important;
+}

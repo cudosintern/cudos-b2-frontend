@@ -1,0 +1,70 @@
+.react-datepicker__year-wrapper {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 10px;
+}
+
+.react-datepicker__year-text {
+  padding: 8px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.react-datepicker__year-text:hover {
+  background-color: #4f7f82;
+  color: white;
+}
+
+/* Make navigation arrows black */
+.react-datepicker__navigation-icon::before {
+  border-color: black !important;
+}
+
+/* Optional: make arrow buttons darker */
+.react-datepicker__navigation {
+  top: 10px;
+}
+/* 🔥 Increase overall popup width */
+.react-datepicker {
+  width: auto !important;
+  min-width: 280px;
+}
+
+/* 🔥 Fix year grid layout */
+.react-datepicker__year-wrapper {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+/* 🔥 Ensure each year fits properly */
+.react-datepicker__year-text {
+  width: 100%;
+  padding: 8px 0;
+  text-align: center;
+  border-radius: 6px;
+}
+
+/* 🔥 Prevent overflow */
+.react-datepicker__year {
+  width: 100%;
+}
+/* 🔵 Selected */
+.react-datepicker__year-text--selected {
+  background-color: #2563eb !important;
+  color: white !important;
+}
+
+/* ⚪ BEFORE selection → gray */
+.react-datepicker__year-text--today {
+  background-color: #e5e7eb !important;
+  color: black !important;
+  border: none !important;
+}
+
+/* ❌ AFTER selection → remove gray completely */
+.year-selected .react-datepicker__year-text--today {
+  background-color: transparent !important;
+  color: inherit !important;
+}
