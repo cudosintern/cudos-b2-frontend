@@ -12,6 +12,7 @@ import CreateMteQpPage from "../pages/ioncudos/assessment/manage_mte_qp/CreateMt
 import ManageMteDetailsPage from "../pages/ioncudos/assessment/manage_mte_qp/ManageMteDetailsPage";
 import DefineRubricsPage from "../pages/ioncudos/assessment/manage_mte_qp/DefineRubricsPage";
 import AttainmentThresholdLevelsPage from "../pages/ioncudos/attainment/attainment_threshold_levels";
+import CiaAttainmentPage from "../pages/ioncudos/attainment/ciaAttainment/CiaAttainmentPage";
 import PsoFormPage from "../pages/ioncudos/curriculum/pso/PsoFormPage";
 
 // import Masters from "../pages/ems/configuration/masters/mastersPage";
@@ -1021,6 +1022,12 @@ export const EMSROUTE = [
         name: "Attainment - Threshold / Levels",
         href: "/attainment/attainment_threshold_levels",
         element: AttainmentThresholdLevelsPage,
+        roles: [],
+      },
+      {
+        name: "CIA Attainment",
+        href: "/attainment/cia_attainment",
+        element: CiaAttainmentPage,
         roles: [],
       },
       {
