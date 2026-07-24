@@ -13,6 +13,8 @@ import ManageMteDetailsPage from "../pages/ioncudos/assessment/manage_mte_qp/Man
 import DefineRubricsPage from "../pages/ioncudos/assessment/manage_mte_qp/DefineRubricsPage";
 import AttainmentThresholdLevelsPage from "../pages/ioncudos/attainment/attainment_threshold_levels";
 import CiaAttainmentPage from "../pages/ioncudos/attainment/ciaAttainment/CiaAttainmentPage";
+import CourseCoAttainmentPage from "../pages/ioncudos/attainment/courseCoAttainment/CourseCoAttainmentPage";
+import PoAttainmentPage from "../pages/ioncudos/attainment/poAttainment/PoAttainmentPage";
 import PsoFormPage from "../pages/ioncudos/curriculum/pso/PsoFormPage";
 
 // import Masters from "../pages/ems/configuration/masters/mastersPage";
@@ -136,6 +138,7 @@ import MteDataImportPage from "../pages/ioncudos/attainment/mtedataimport/MteDat
 import MTEImportReviewPage from "../pages/ioncudos/attainment/mtedataimport/mteImportReview/MTEImportReviewPage";
 import ManageMTEMarksPage from "../pages/ioncudos/attainment/mtedataimport/ManageMTEMarksPage";
 import MTEUploadPage from "../pages/ioncudos/attainment/mtedataimport/mteUpload/MTEUploadPage";
+import DataAnalysisPage from "../pages/ioncudos/attainment/dataAnalysis/DataAnalysisPage";
 import ManageQuestionTypePage from "../pages/ioncudos/survey/manage-survey-question-type/ManageQuestionTypePage";
 import ManageResponseTemplatePage from "../pages/ioncudos/survey/manage-response-template/ManageResponseTemplatePage";
 import ManageStakeholderGroupPage from "../pages/ioncudos/survey/manage-stakeholder-group/ManageStakeholderGroupPage";
@@ -1025,12 +1028,6 @@ export const EMSROUTE = [
         roles: [],
       },
       {
-        name: "CIA Attainment",
-        href: "/attainment/cia_attainment",
-        element: CiaAttainmentPage,
-        roles: [],
-      },
-      {
         name: "CCE Data Entry / Import",
         href: "/attainment/cce_data_import",
         element: CceDataImportList,
@@ -1064,6 +1061,30 @@ export const EMSROUTE = [
         name: "SEE Data Import",
         href: "/attainment/see_data_import",
         element: SeeCourseWiseImport,
+        roles: [],
+      },
+      {
+        name: "CIA Attainment",
+        href: "/attainment/cia_attainment",
+        element: CiaAttainmentPage,
+        roles: [],
+      },
+      {
+        name: "Course CO Attainment (CIA, MTE, TEE)",
+        href: "/attainment/course_co_attainment",
+        element: CourseCoAttainmentPage,
+        roles: [],
+      },
+      {
+        name: "PO Attainment",
+        href: "/attainment/po_attainment",
+        element: PoAttainmentPage,
+        roles: [],
+      },
+      {
+        name: "Data Analysis (CIA, MTE, TEE)",
+        href: "/attainment/data_analysis",
+        element: DataAnalysisPage,
         roles: [],
       },
     ],
