@@ -4,8 +4,6 @@ import AddExistingUser from "../pages/ioncudos/configuration/bos/AddExistingUser
 import AddNewMember from "../pages/ioncudos/configuration/bos/AddNewMember";
 import GenericPOPage from "../pages/ioncudos/configuration/genericPO/genericPOPage";
 import ProgramMode from "../pages/ioncudos/configuration/program_mode/ProgramMode";
-import PeoPage from "../pages/ioncudos/curriculum/peo";
-import PsoPage from "../pages/ioncudos/curriculum/pso";
 import AssessmentPage from "../pages/ioncudos/assessment/manage_mte_qp";
 import UploadMteQpPage from "../pages/ioncudos/assessment/manage_mte_qp/UploadMteQpPage";
 import CreateMteQpPage from "../pages/ioncudos/assessment/manage_mte_qp/CreateMteQpPage";
@@ -25,7 +23,6 @@ import DepartmentPage from "../pages/ems/configuration/departmentDetail/departme
 import BloomDomainPage from "../pages/ioncudos/configuration/bloomDomain/bloomDomainPage";
 import OutcomePage from "../pages/ioncudos/configuration/program/outcomePage";
 import MapLevelWeightagePage from "../pages/ioncudos/configuration/mapLevelWeightage/mapLevelWeightagePage";
-import DeliveryMethodPage from "../pages/ioncudos/curriculum/deliveryMethod/deliveryMethodPage";
 // import ProgramTypePage from "../pages/ems/configuration/programType/programTypePage";
 // import ProgramPage from "../pages/ems/configuration/program/programPage";
 // import AcademicCalendarPage from "../pages/ems/academics/academicCalendar/academicCalendarPage";
@@ -113,21 +110,8 @@ import ChangePasswordPage from "../pages/changepassword";
 import genericKPPage from "../pages/ioncudos/configuration/generickp/genericKPPage";
 import GenericPOForm from "../pages/ioncudos/configuration/genericPO/GenericPOForm";
 import LabCategoryPage from "../pages/ioncudos/configuration/labCategory/labCategoryPage";
-import CurriculumPage from "../pages/ioncudos/curriculum/curriculum/CurriculumPage";
-import CurriculumForm from "../pages/ioncudos/curriculum/curriculum/CurriculumForm";
-import ManageKnowledgeProfile from "../pages/ioncudos/curriculum/manageKnowledgeProfile/ManageKnowledgeProfile";
-import ManageKnowledgeProfileForm from "../pages/ioncudos/curriculum/manageKnowledgeProfile/ManageKnowledgeProfileForm";
-import PoPeoMappingPage from "../pages/ioncudos/curriculum/poPeoMapping/PoPeoMappingPage";
-//import CurriculumSettingsPage from "../pages/ioncudos/curriculum/curriculumSettings/CurriculumSettingsPage";
 import BloomLevel from "../pages/ioncudos/configuration/bloomLevel/BloomLevel";
-import CurriculumSettingsPage from "../pages/ioncudos/curriculum/curriculumSettings/CurriculumSettingsPage";
-// import PoPeoMappingPage from "../pages/ioncudos/curriculum/poPeoMapping/PoPeoMappingPage";
-//import CurriculumSettingsPage from "../pages/ioncudos/curriculum/curriculumSettings/curriculumSettingsPage";
-import CourseOutcomePage from "../pages/ioncudos/curriculum/courseOutcome/CourseOutcomePage";
 
-import CompetenciesAndPIsPage from "../pages/ioncudos/curriculum/competenciesAndPIs/CompetenciesAndPIsPage";
-import CoPoMapPage from "../pages/ioncudos/curriculum/co_po_map";
-import ManageTopicsPage from "../pages/ioncudos/curriculum/manageTopics/ManageTopicsPage";
 import CiaList from "../pages/ioncudos/assessment/cia/CiaList";
 import CceDataImportList from "../pages/ioncudos/attainment/cceDataImport/CceDataImportList";
 import CiaQpList from "../pages/ioncudos/assessment/manage_cia_qp_rubrics/CiaQpList";
@@ -174,6 +158,8 @@ import MteCoAttainmentPage from "../pages/ioncudos/attainment/mteCOAttainment/Mt
 import FirstYearCourseCoAttainmentPage from "../pages/ioncudos/attainment/firstYearCourseCoAttainment/FirstYearCourseCoAttainment";
 import ConsolidatedPOAttainmentPage from "../pages/ioncudos/attainment/consolidatedPOAttainment/ConsolidatedPOAttainment";
 import CAYPOAttainmentPage from "../pages/ioncudos/attainment/CAYPOAttainment/CAYPOAttainment";
+
+import MTEAttainment from "../pages/ioncudos/attainment/mteCoAttainment";
 
 export const EMSROUTE = [
   {
@@ -844,7 +830,6 @@ export const EMSROUTE = [
     subItems: [
       {
         name: "Manage Knowledge and Attitude Profile",
-        href: "/curriculum/manage_knowledge_profile",
         element: ManageKnowledgeProfile,
         roles: [],
       },
@@ -856,32 +841,27 @@ export const EMSROUTE = [
       },
       {
         name: "", // Hidden
-        href: "/curriculum/create",
         element: CurriculumForm,
         roles: [],
       },
       {
         name: "", // Hidden
-        href: "/curriculum/edit/:id",
         element: CurriculumForm,
         roles: [],
       },
 
       {
         name: "", // Hidden
-        href: "/curriculum/manage_knowledge_profile/create",
         element: ManageKnowledgeProfileForm,
         roles: [],
       },
       {
         name: "", // Hidden
-        href: "/curriculum/manage_knowledge_profile/edit/:id",
         element: ManageKnowledgeProfileForm,
         roles: [],
       },
       {
         name: "Program Educational Objectives (PEO)",
-        href: "/curriculum/program_educational_objectives",
         element: PeoPage,
         roles: [],
         subItems: [],
@@ -889,7 +869,6 @@ export const EMSROUTE = [
 
       {
         name: "POs / PSOs",
-        href: "/curriculum/program_outcomes",
         element: Outlet,
         roles: [],
         subItems: [
@@ -917,39 +896,33 @@ export const EMSROUTE = [
       },
       {
         name: "PO to PEO Mapping",
-        href: "/curriculum/po_peo_mapping",
         element: PoPeoMappingPage,
         roles: [],
       },
 
       {
         name: "Curriculum Settings",
-        href: "/curriculum/curriculum_settings",
         element: CurriculumSettingsPage,
         roles: [],
       },
       {
-        href: "/curriculum/competencies_and_pis",
         name: "Competencies and PIs",
         element: CompetenciesAndPIsPage,
         roles: [],
       },
       {
         name: "Course Outcomes (COs)",
-        href: "/curriculum/course_outcomes",
         element: CourseOutcomePage,
         roles: [],
       },
       {
         name: "CO–PO Mapping",
-        href: "/curriculum/co_po_mapping",
         element: CoPoMapPage,
         roles: [],
       },
 
       {
         name: "Manage Topics & TLOs",
-        href: "/curriculum/manage_topics",
         element: ManageTopicsPage,
         roles: [],
       },
@@ -1043,6 +1016,13 @@ export const EMSROUTE = [
         name: "MTE Data Import",
         href: "/attainment/mte_data_import",
         element: MteDataImportPage,
+        roles: [],
+      },
+      // ========== NEW SUB-ITEM ==========
+      {
+        name: "MTE CO Attainment",
+        href: "/attainment/mte-co-attainment",
+        element: MTEAttainment,
         roles: [],
       },
       {
@@ -1333,4 +1313,3 @@ export const EMSROUTE = [
   },
 ];
 
-export default EMSROUTE;
