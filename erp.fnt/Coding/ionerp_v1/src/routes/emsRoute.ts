@@ -169,6 +169,12 @@ import FacultyContributionDataPage from "../pages/ioncudos/reports/facultyContri
 import DepartmentVisionMissionPage from "../pages/ioncudos/reports/departmentVisionMission/DepartmentVisionMissionPage";
 // import DepartmentCurriculumDetailsListPage from "../pages/ioncudos/reports/departmentCurriculumDetailsList/DepartmentCurriculumDetailsListPage";
 
+// Import MTE CO Attainment page
+import MteCoAttainmentPage from "../pages/ioncudos/attainment/mteCOAttainment/MteCoAttainment";
+import FirstYearCourseCoAttainmentPage from "../pages/ioncudos/attainment/firstYearCourseCoAttainment/FirstYearCourseCoAttainment";
+import ConsolidatedPOAttainmentPage from "../pages/ioncudos/attainment/consolidatedPOAttainment/ConsolidatedPOAttainment";
+import CAYPOAttainmentPage from "../pages/ioncudos/attainment/CAYPOAttainment/CAYPOAttainment";
+
 export const EMSROUTE = [
   {
     name: "Home",
@@ -1085,6 +1091,29 @@ export const EMSROUTE = [
         name: "Data Analysis (CIA, MTE, TEE)",
         href: "/attainment/data_analysis",
         element: DataAnalysisPage,
+      // New MTE CO Attainment page
+      {
+        name: "CO Attainment (MTE)",
+        href: "/attainment/mte_co_attainment",
+        element: MteCoAttainmentPage,
+        roles: [],
+      },
+      {
+        name: "First Year Course - CO Attainment (CCE, MTE, SEE)",
+        href: "/attainment/first_year_co_attainment",
+        element: FirstYearCourseCoAttainmentPage,
+        roles: [],
+      },
+      {
+        name: "Consolidated PO Attainment",
+        href: "/attainment/consolidated_po_attainment",
+        element: ConsolidatedPOAttainmentPage,
+        roles: [],
+      },
+      {
+        name: "CAY PO Attainment",
+        href: "/attainment/cay_po_attainment",
+        element: CAYPOAttainmentPage,
         roles: [],
       },
     ],

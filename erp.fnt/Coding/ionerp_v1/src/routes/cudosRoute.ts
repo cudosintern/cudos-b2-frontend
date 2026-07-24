@@ -26,6 +26,9 @@ import CceDataImportList from "../pages/ioncudos/attainment/cceDataImport/CceDat
 import CiaQpList from "../pages/ioncudos/assessment/manage_cia_qp_rubrics/CiaQpList";
 import CiaQpEditor from "../pages/ioncudos/assessment/manage_cia_qp_rubrics/CiaQpEditor";
 import SeeCourseWiseImport from "../pages/ioncudos/attainment/seeCourseWiseImport/SeeCourseWiseImport";
+import FirstYearCourseCoAttainmentPage from "../pages/ioncudos/attainment/firstYearCourseCoAttainment/FirstYearCourseCoAttainment";
+import ConsolidatedPOAttainmentPage from "../pages/ioncudos/attainment/consolidatedPOAttainment/ConsolidatedPOAttainment";
+
 import ManageQuestionTypePage from "../pages/ioncudos/survey/manage-survey-question-type/ManageQuestionTypePage";
 import JournalEditorialBoardMemberPage from "../pages/ioncudos/facultyContribution/journalEditorialBoardMember/JournalEditorialBoardMemberPage";
 import MemberOfAcademicAdministrativeCocurricularPage from "../pages/ioncudos/facultyContribution/memberOfAcademicAdministrativeCocurricularBodies/MemberOfAcademicAdministrativeCocurricularPage";
@@ -251,6 +254,13 @@ export const CUDOSROUTE = [
         element: SeeCourseWiseImport,
         roles: [],
       },
+      {
+        name: "First Year Course - CO Attainment (CCE, MTE, SEE)",
+        href: "/attainment/first_year_co_attainment",
+        element: FirstYearCourseCoAttainmentPage,
+        roles: [],
+      },
+
     ],
   },
   {

@@ -1,5 +1,6 @@
 import React from "react";
 import { Dialog, Transition } from "@headlessui/react";
+import { HelpCircle } from "lucide-react";
 
 interface ModalWithFormProps {
   isOpen: boolean;
@@ -7,9 +8,10 @@ interface ModalWithFormProps {
   title: string;
   size?: "sm" | "md" | "lg" | "xl" | "5xl" | "full";
   children: React.ReactNode;
+  onHelpClick?: () => void;
 }
 
-const ModalContainer: React.FC<ModalWithFormProps> = ({ isOpen, onClose, title, size = "xl", children }) => {
+const ModalContainer: React.FC<ModalWithFormProps> = ({ isOpen, onClose, title, size = "xl", children, onHelpClick }) => {
   const sizeClasses = {
     sm: "max-w-sm",
     md: "max-w-md",
@@ -57,16 +59,27 @@ const ModalContainer: React.FC<ModalWithFormProps> = ({ isOpen, onClose, title, 
                 >
                   {title}
                 </Dialog.Title>
-                <button onClick={onClose} className='text-gray-400 hover:text-gray-500 focus:outline-none'>
-                  <svg className='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
-                    <path
-                      strokeLinecap='round'
-                      strokeLinejoin='round'
-                      strokeWidth={2}
-                      d='M6 18L18 6M6 6l12 12'
-                    />
-                  </svg>
-                </button>
+                <div className="flex items-center gap-2.5">
+                  {onHelpClick && (
+                    <button
+                      onClick={onHelpClick}
+                      className="focus:outline-none flex items-center justify-center"
+                      title="Web Help"
+                    >
+                      <HelpCircle className="w-4.5 h-4.5 cursor-pointer text-[#4a8494] opacity-80 hover:opacity-100 transition-opacity" />
+                    </button>
+                  )}
+                  <button onClick={onClose} className='text-gray-400 hover:text-gray-500 focus:outline-none'>
+                    <svg className='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
+                      <path
+                        strokeLinecap='round'
+                        strokeLinejoin='round'
+                        strokeWidth={2}
+                        d='M6 18L18 6M6 6l12 12'
+                      />
+                    </svg>
+                  </button>
+                </div>
               </div>
               <div className='mt-6'>{children}</div>
             </div>

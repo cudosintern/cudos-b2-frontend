@@ -14,6 +14,8 @@ interface MultiSelectProps {
     value?: any;
     onChange: (value: any) => void;
     onBlur?: () => void;
+    allSelectedLabel?: string;
+    customLabelBehavior?: boolean;
     [key: string]: any;
 }
 
@@ -35,10 +37,24 @@ const MultiSelect = React.forwardRef<any, MultiSelectProps>(({ register, ...prop
         return String(val).toLowerCase();
     };
 
+    const flattenOptions = (options: any[]): any[] => {
+        if (!options || !Array.isArray(options)) return [];
+        const flat: any[] = [];
+        options.forEach((opt: any) => {
+            if (opt && typeof opt === 'object' && Array.isArray(opt.options)) {
+                flat.push(...opt.options);
+            } else {
+                flat.push(opt);
+            }
+        });
+        return flat;
+    };
+
     const filterOptions = (options: any[], input: string) => {
         if (!options || !Array.isArray(options)) return [];
+        const flatOptions = flattenOptions(options);
         const lowerInput = safeToLowerCase(input);
-        return options.filter((opt: any) => {
+        return flatOptions.filter((opt: any) => {
             const label = typeof opt === 'object' && opt !== null ? (opt.label || "") : opt;
             return safeToLowerCase(label).includes(lowerInput);
         });
@@ -60,7 +76,8 @@ const MultiSelect = React.forwardRef<any, MultiSelectProps>(({ register, ...prop
         const normalized = valArray.map((val: any) => {
             if (typeof val === 'object' && val !== null && 'label' in val) return val;
             // If it's a primitive value, find the full option object from props.options
-            const found = props.options?.find((opt: any) => {
+            const flatOptions = props.options ? flattenOptions(props.options) : [];
+            const found = flatOptions.find((opt: any) => {
                 const optVal = typeof opt === 'object' && opt !== null ? opt.value : opt;
                 // Use safe comparison (string to string) if necessary to avoid cast warnings
                 return String(optVal) === String(val);
@@ -95,6 +112,64 @@ const MultiSelect = React.forwardRef<any, MultiSelectProps>(({ register, ...prop
             {props.children}
         </components.Input>
     );
+
+    const ValueContainerComponent = ({ children, ...selectProps }: any) => {
+        const currentValues = selectProps.getValue();
+        const hasValues = currentValues && currentValues.length > 0;
+        const allSelected = props.isMulti && props.allSelectedLabel && hasValues && props.options && currentValues.length === props.options.length;
+
+        const showCustomLabel = props.isMulti && props.customLabelBehavior && hasValues;
+
+        if (showCustomLabel) {
+            const labelText = allSelected 
+                ? (props.allSelectedLabel || "All Selected")
+                : (currentValues.length === 1 
+                    ? currentValues[0].label 
+                    : `${currentValues.length} selected`);
+            
+            const childrenArray = React.Children.toArray(children);
+            return (
+                <components.ValueContainer {...selectProps}>
+                    <span className="text-sm text-gray-700 dark:text-gray-300 ml-1">
+                        {labelText}
+                    </span>
+                    {childrenArray.filter((child: any) => {
+                        if (!child) return false;
+                        // Filter out MultiValue chips which have props.data
+                        if (child.props && child.props.data) {
+                            return false;
+                        }
+                        return true;
+                    })}
+                </components.ValueContainer>
+            );
+        }
+
+        if (allSelected) {
+            const childrenArray = React.Children.toArray(children);
+            return (
+                <components.ValueContainer {...selectProps}>
+                    <span className="text-sm text-gray-700 dark:text-gray-300 ml-1">
+                        {props.allSelectedLabel}
+                    </span>
+                    {childrenArray.filter((child: any) => {
+                        if (!child) return false;
+                        // Filter out MultiValue chips which have props.data
+                        if (child.props && child.props.data) {
+                            return false;
+                        }
+                        return true;
+                    })}
+                </components.ValueContainer>
+            );
+        }
+
+        return (
+            <components.ValueContainer {...selectProps}>
+                {children}
+            </components.ValueContainer>
+        );
+    };
 
     const customFilterOption = (opt: any, input: string) => {
         const data = opt.data || opt;
@@ -178,26 +253,39 @@ const MultiSelect = React.forwardRef<any, MultiSelectProps>(({ register, ...prop
         }),
         multiValueRemove: (def: any) => ({
             ...def,
-            display: 'none', 
+            display: 'none',
         }),
         valueContainer: (base: any) => ({
             ...base,
-            maxHeight: "65px",
-            overflow: "auto",
+            height: '36px',
+            padding: '0 8px',
+            overflow: 'auto',
+            display: 'flex',
+            flexWrap: 'nowrap' as const,
         }),
         control: (base: any, state: any) => ({
             ...base,
-            borderColor: state.isFocused ? '#437880' : '#D1D5DB',
+            borderColor: state.isDisabled ? '#E5E7EB' : state.isFocused ? '#437880' : '#D1D5DB',
             boxShadow: state.isFocused ? '0 0 0 2px #437880' : 'none',
             '&:hover': {
                 borderColor: state.isFocused ? '#437880' : '#9ca3af',
             },
             borderRadius: '0.375rem',
-            backgroundColor: 'white',
+            backgroundColor: state.isDisabled ? '#F3F4F6' : 'white',
+            height: '38px',
             minHeight: '38px',
             fontSize: '0.875rem',
             transition: 'none',
             outline: 'none',
+        }),
+        indicatorsContainer: (base: any) => ({
+            ...base,
+            height: '36px',
+        }),
+        input: (base: any) => ({
+            ...base,
+            margin: '0px',
+            padding: '0px',
         }),
         menuPortal: (base: any) => ({ ...base, zIndex: 9999 }),
         menu: (def: any) => ({ ...def, zIndex: 9999 }),
@@ -228,6 +316,7 @@ const MultiSelect = React.forwardRef<any, MultiSelectProps>(({ register, ...prop
                     components={{
                         ...(props.isMulti ? { Option: OptionComponent } : {}),
                         Input: InputComponent,
+                        ValueContainer: ValueContainerComponent,
                         ...props.components,
                     }}
                     filterOption={customFilterOption}
@@ -239,7 +328,7 @@ const MultiSelect = React.forwardRef<any, MultiSelectProps>(({ register, ...prop
                     closeMenuOnSelect={!props.isMulti}
                     tabSelectsValue={false}
                     backspaceRemovesValue={false}
-                    hideSelectedOptions={!props.isMulti}
+                    hideSelectedOptions={false}
                     blurInputOnSelect={!props.isMulti}
                     placeholder={props.placeholder || "Select..."}
                 />
