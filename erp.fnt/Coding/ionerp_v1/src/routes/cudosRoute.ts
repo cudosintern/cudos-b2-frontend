@@ -9,23 +9,25 @@ import MapLevelWeightagePage from "../pages/ioncudos/configuration/mapLevelWeigh
 import Bos from "../pages/ioncudos/configuration/bos/Bos";
 import LabCategoryPage from "../pages/ioncudos/configuration/labCategory/labCategoryPage";
 import genericKPPage from "../pages/ioncudos/configuration/generickp/genericKPPage";
-import CurriculumPage from "../pages/ioncudos/curriculum/curriculum/CurriculumPage";
-import CurriculumForm from "../pages/ioncudos/curriculum/curriculum/CurriculumForm";
-import PsoPage from "../pages/ioncudos/curriculum/pso";
-import CompetenciesAndPIsPage from "../pages/ioncudos/curriculum/competenciesAndPIs/CompetenciesAndPIsPage";
-import CourseOutcomePage from "../pages/ioncudos/curriculum/courseOutcome/CourseOutcomePage";
+import CurriculumPage from "../pages/ioncudos/Curriculum/curriculum/CurriculumPage";
+import CurriculumForm from "../pages/ioncudos/Curriculum/curriculum/CurriculumForm";
+import PsoPage from "../pages/ioncudos/Curriculum/pso";
+import CompetenciesAndPIsPage from "../pages/ioncudos/Curriculum/competenciesAndPIs/CompetenciesAndPIsPage";
+import CourseOutcomePage from "../pages/ioncudos/Curriculum/courseOutcome/CourseOutcomePage";
 
-//import AddCoursePage from "../pages/ioncudos/curriculum/course/AddCoursePage";
-import PsoFormPage from "../pages/ioncudos/curriculum/pso/PsoFormPage";
-import ManageKnowledgeProfile from "../pages/ioncudos/curriculum/manageKnowledgeProfile/ManageKnowledgeProfile";
-import PoPeoMappingPage from "../pages/ioncudos/curriculum/poPeoMapping/PoPeoMappingPage";
-import CurriculumSettingsPage from "../pages/ioncudos/curriculum/curriculumSettings/CurriculumSettingsPage";
-import CourseSpecializationPage from "../pages/ioncudos/curriculum/curriculumSettings/courseSpecialization/CourseSpecialization";
+//import AddCoursePage from "../pages/ioncudos/Curriculum/course/AddCoursePage";
+import PsoFormPage from "../pages/ioncudos/Curriculum/pso/PsoFormPage";
+import ManageKnowledgeProfile from "../pages/ioncudos/Curriculum/manageKnowledgeProfile/ManageKnowledgeProfile";
+import PoPeoMappingPage from "../pages/ioncudos/Curriculum/poPeoMapping/PoPeoMappingPage";
+import CurriculumSettingsPage from "../pages/ioncudos/Curriculum/curriculumSettings/CurriculumSettingsPage";
+import CourseSpecializationPage from "../pages/ioncudos/Curriculum/curriculumSettings/courseSpecialization/CourseSpecialization";
 import CiaList from "../pages/ioncudos/assessment/cia/CiaList";
 import CceDataImportList from "../pages/ioncudos/attainment/cceDataImport/CceDataImportList";
 import CiaQpList from "../pages/ioncudos/assessment/manage_cia_qp_rubrics/CiaQpList";
 import CiaQpEditor from "../pages/ioncudos/assessment/manage_cia_qp_rubrics/CiaQpEditor";
 import SeeCourseWiseImport from "../pages/ioncudos/attainment/seeCourseWiseImport/SeeCourseWiseImport";
+import CoAttainmentComparison from "../pages/ioncudos/attainment/coAttainmentComparison/CoAttainmentComparison";
+import ProgramPoPsoAttainment from "../pages/ioncudos/attainment/programPoPsoAttainment/ProgramPoPsoAttainment";
 import ManageQuestionTypePage from "../pages/ioncudos/survey/manage-survey-question-type/ManageQuestionTypePage";
 import JournalEditorialBoardMemberPage from "../pages/ioncudos/facultyContribution/journalEditorialBoardMember/JournalEditorialBoardMemberPage";
 import MemberOfAcademicAdministrativeCocurricularPage from "../pages/ioncudos/facultyContribution/memberOfAcademicAdministrativeCocurricularBodies/MemberOfAcademicAdministrativeCocurricularPage";
@@ -251,6 +253,19 @@ export const CUDOSROUTE = [
         element: SeeCourseWiseImport,
         roles: [],
       },
+      {
+        name: "CO Attainment Comparision",
+        href: "/attainment/co_attainment_comparision",
+        element: CoAttainmentComparison,
+        roles: [],
+      },
+      {
+        name: "Program Level Course - PO & PSO Attainment",
+        href: "/attainment/program_po_pso_attainment",
+        element: ProgramPoPsoAttainment,
+        roles: [],
+      },
+
     ],
   },
   {

@@ -4,15 +4,15 @@ import AddExistingUser from "../pages/ioncudos/configuration/bos/AddExistingUser
 import AddNewMember from "../pages/ioncudos/configuration/bos/AddNewMember";
 import GenericPOPage from "../pages/ioncudos/configuration/genericPO/genericPOPage";
 import ProgramMode from "../pages/ioncudos/configuration/program_mode/ProgramMode";
-import PeoPage from "../pages/ioncudos/curriculum/peo";
-import PsoPage from "../pages/ioncudos/curriculum/pso";
+import PeoPage from "../pages/ioncudos/Curriculum/peo";
+import PsoPage from "../pages/ioncudos/Curriculum/pso";
 import AssessmentPage from "../pages/ioncudos/assessment/manage_mte_qp";
 import UploadMteQpPage from "../pages/ioncudos/assessment/manage_mte_qp/UploadMteQpPage";
 import CreateMteQpPage from "../pages/ioncudos/assessment/manage_mte_qp/CreateMteQpPage";
 import ManageMteDetailsPage from "../pages/ioncudos/assessment/manage_mte_qp/ManageMteDetailsPage";
 import DefineRubricsPage from "../pages/ioncudos/assessment/manage_mte_qp/DefineRubricsPage";
 import AttainmentThresholdLevelsPage from "../pages/ioncudos/attainment/attainment_threshold_levels";
-import PsoFormPage from "../pages/ioncudos/curriculum/pso/PsoFormPage";
+import PsoFormPage from "../pages/ioncudos/Curriculum/pso/PsoFormPage";
 
 // import Masters from "../pages/ems/configuration/masters/mastersPage";
 // import UserRolePage from "../pages/ems/configuration/userRole/userRolePage";
@@ -22,7 +22,7 @@ import DepartmentPage from "../pages/ems/configuration/departmentDetail/departme
 import BloomDomainPage from "../pages/ioncudos/configuration/bloomDomain/bloomDomainPage";
 import OutcomePage from "../pages/ioncudos/configuration/program/outcomePage";
 import MapLevelWeightagePage from "../pages/ioncudos/configuration/mapLevelWeightage/mapLevelWeightagePage";
-import DeliveryMethodPage from "../pages/ioncudos/curriculum/deliveryMethod/deliveryMethodPage";
+import DeliveryMethodPage from "../pages/ioncudos/Curriculum/deliveryMethod/deliveryMethodPage";
 // import ProgramTypePage from "../pages/ems/configuration/programType/programTypePage";
 // import ProgramPage from "../pages/ems/configuration/program/programPage";
 // import AcademicCalendarPage from "../pages/ems/academics/academicCalendar/academicCalendarPage";
@@ -110,27 +110,29 @@ import ChangePasswordPage from "../pages/changepassword";
 import genericKPPage from "../pages/ioncudos/configuration/generickp/genericKPPage";
 import GenericPOForm from "../pages/ioncudos/configuration/genericPO/GenericPOForm";
 import LabCategoryPage from "../pages/ioncudos/configuration/labCategory/labCategoryPage";
-import CurriculumPage from "../pages/ioncudos/curriculum/curriculum/CurriculumPage";
-import CurriculumForm from "../pages/ioncudos/curriculum/curriculum/CurriculumForm";
-import ManageKnowledgeProfile from "../pages/ioncudos/curriculum/manageKnowledgeProfile/ManageKnowledgeProfile";
-import ManageKnowledgeProfileForm from "../pages/ioncudos/curriculum/manageKnowledgeProfile/ManageKnowledgeProfileForm";
-import PoPeoMappingPage from "../pages/ioncudos/curriculum/poPeoMapping/PoPeoMappingPage";
-//import CurriculumSettingsPage from "../pages/ioncudos/curriculum/curriculumSettings/CurriculumSettingsPage";
+import CurriculumPage from "../pages/ioncudos/Curriculum/curriculum/CurriculumPage";
+import CurriculumForm from "../pages/ioncudos/Curriculum/curriculum/CurriculumForm";
+import ManageKnowledgeProfile from "../pages/ioncudos/Curriculum/manageKnowledgeProfile/ManageKnowledgeProfile";
+import ManageKnowledgeProfileForm from "../pages/ioncudos/Curriculum/manageKnowledgeProfile/ManageKnowledgeProfileForm";
+import PoPeoMappingPage from "../pages/ioncudos/Curriculum/poPeoMapping/PoPeoMappingPage";
+//import CurriculumSettingsPage from "../pages/ioncudos/Curriculum/curriculumSettings/CurriculumSettingsPage";
 import BloomLevel from "../pages/ioncudos/configuration/bloomLevel/BloomLevel";
-import CurriculumSettingsPage from "../pages/ioncudos/curriculum/curriculumSettings/CurriculumSettingsPage";
-// import PoPeoMappingPage from "../pages/ioncudos/curriculum/poPeoMapping/PoPeoMappingPage";
-//import CurriculumSettingsPage from "../pages/ioncudos/curriculum/curriculumSettings/curriculumSettingsPage";
-import CourseOutcomePage from "../pages/ioncudos/curriculum/courseOutcome/CourseOutcomePage";
+import CurriculumSettingsPage from "../pages/ioncudos/Curriculum/curriculumSettings/CurriculumSettingsPage";
+// import PoPeoMappingPage from "../pages/ioncudos/Curriculum/poPeoMapping/PoPeoMappingPage";
+//import CurriculumSettingsPage from "../pages/ioncudos/Curriculum/curriculumSettings/curriculumSettingsPage";
+import CourseOutcomePage from "../pages/ioncudos/Curriculum/courseOutcome/CourseOutcomePage";
 
-import CompetenciesAndPIsPage from "../pages/ioncudos/curriculum/competenciesAndPIs/CompetenciesAndPIsPage";
-import CoPoMapPage from "../pages/ioncudos/curriculum/co_po_map";
-import ManageTopicsPage from "../pages/ioncudos/curriculum/manageTopics/ManageTopicsPage";
+import CompetenciesAndPIsPage from "../pages/ioncudos/Curriculum/competenciesAndPIs/CompetenciesAndPIsPage";
+import CoPoMapPage from "../pages/ioncudos/Curriculum/co_po_map";
+import ManageTopicsPage from "../pages/ioncudos/Curriculum/manageTopics/ManageTopicsPage";
 import CiaList from "../pages/ioncudos/assessment/cia/CiaList";
 import CceDataImportList from "../pages/ioncudos/attainment/cceDataImport/CceDataImportList";
 import CiaQpList from "../pages/ioncudos/assessment/manage_cia_qp_rubrics/CiaQpList";
 import CiaQpEditor from "../pages/ioncudos/assessment/manage_cia_qp_rubrics/CiaQpEditor";
 import ManageModelQPPage from "../pages/ioncudos/assessment/manageModelQP/ManageModelQPPage";
 import SeeCourseWiseImport from "../pages/ioncudos/attainment/seeCourseWiseImport/SeeCourseWiseImport";
+import CoAttainmentComparison from "../pages/ioncudos/attainment/coAttainmentComparison/CoAttainmentComparison";
+import ProgramPoPsoAttainment from "../pages/ioncudos/attainment/programPoPsoAttainment/ProgramPoPsoAttainment";
 import MteDataImportPage from "../pages/ioncudos/attainment/mtedataimport/MteDataImportPage";
 import MTEImportReviewPage from "../pages/ioncudos/attainment/mtedataimport/mteImportReview/MTEImportReviewPage";
 import ManageMTEMarksPage from "../pages/ioncudos/attainment/mtedataimport/ManageMTEMarksPage";
@@ -1057,6 +1059,18 @@ export const EMSROUTE = [
         name: "SEE Data Import",
         href: "/attainment/see_data_import",
         element: SeeCourseWiseImport,
+        roles: [],
+      },
+      {
+        name: "CO Attainment Comparision",
+        href: "/attainment/co_attainment_comparision",
+        element: CoAttainmentComparison,
+        roles: [],
+      },
+      {
+        name: "Program Level Course - PO & PSO Attainment",
+        href: "/attainment/program_po_pso_attainment",
+        element: ProgramPoPsoAttainment,
         roles: [],
       },
     ],
