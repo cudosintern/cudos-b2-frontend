@@ -1071,7 +1071,7 @@ export const EMSROUTE = [
         name: "Data Analysis (CIA, MTE, TEE)",
         href: "/attainment/data_analysis",
         element: DataAnalysisPage,
-      }
+      },
       // New MTE CO Attainment page
       {
         name: "CO Attainment (MTE)",
