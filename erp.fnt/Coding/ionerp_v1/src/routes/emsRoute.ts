@@ -310,12 +310,12 @@ export const EMSROUTE = [
         element: genericKPPage,
         roles: [],
       },
-      {
-        name: "Delivery Method",
-        href: "delivery_method",
-        roles: [],
-        element: DeliveryMethodPage,
-      },
+      // {
+      //   name: "Delivery Method",
+      //   href: "delivery_method",
+      //   roles: [],
+      //   element: DeliveryMethodPage,
+      // },
       {
         name: "Lab Category",
         href: "labCategory",
