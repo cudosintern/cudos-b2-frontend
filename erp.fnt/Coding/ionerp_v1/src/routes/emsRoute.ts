@@ -842,11 +842,6 @@ export const EMSROUTE = [
     roles: [],
     subItems: [
       {
-        name: "Manage Knowledge and Attitude Profile",
-        element: ManageKnowledgeProfile,
-        roles: [],
-      },
-      {
         name: "Curriculum",
         href: "/curriculum",
         element: CurriculumPage,
@@ -854,34 +849,33 @@ export const EMSROUTE = [
       },
       {
         name: "", // Hidden
+        href: "/curriculum/create",
         element: CurriculumForm,
         roles: [],
       },
       {
         name: "", // Hidden
+        href: "/curriculum/edit/:id",
         element: CurriculumForm,
         roles: [],
       },
 
       {
-        name: "", // Hidden
-        element: ManageKnowledgeProfileForm,
-        roles: [],
-      },
-      {
-        name: "", // Hidden
-        element: ManageKnowledgeProfileForm,
+        href: "/curriculum/competencies_and_pis",
+        name: "Competencies and PIs",
+        element: CompetenciesAndPIsPage,
         roles: [],
       },
       {
         name: "Program Educational Objectives (PEO)",
+        href: "/curriculum/program_educational_objectives",
         element: PeoPage,
         roles: [],
         subItems: [],
       },
-
       {
         name: "POs / PSOs",
+        href: "/curriculum/program_outcomes",
         element: Outlet,
         roles: [],
         subItems: [
@@ -908,35 +902,51 @@ export const EMSROUTE = [
         ],
       },
       {
+        name: "Manage Knowledge and Attitude Profile",
+        href: "/curriculum/manage_knowledge_profile",
+        element: ManageKnowledgeProfile,
+        roles: [],
+      },
+      {
+        name: "", // Hidden
+        href: "/curriculum/manage_knowledge_profile/create",
+        element: ManageKnowledgeProfileForm,
+        roles: [],
+      },
+      {
+        name: "", // Hidden
+        href: "/curriculum/manage_knowledge_profile/edit/:id",
+        element: ManageKnowledgeProfileForm,
+        roles: [],
+      },
+      {
         name: "PO to PEO Mapping",
+        href: "/curriculum/po_peo_mapping",
         element: PoPeoMappingPage,
         roles: [],
       },
-
+      {
+        name: "Manage Topics & TLOs",
+        href: "/curriculum/manage_topics",
+        element: ManageTopicsPage,
+        roles: [],
+      },
       {
         name: "Curriculum Settings",
+        href: "/curriculum/curriculum_settings",
         element: CurriculumSettingsPage,
         roles: [],
       },
       {
-        name: "Competencies and PIs",
-        element: CompetenciesAndPIsPage,
-        roles: [],
-      },
-      {
         name: "Course Outcomes (COs)",
+        href: "/curriculum/course_outcomes",
         element: CourseOutcomePage,
         roles: [],
       },
       {
         name: "CO–PO Mapping",
+        href: "/curriculum/co_po_mapping",
         element: CoPoMapPage,
-        roles: [],
-      },
-
-      {
-        name: "Manage Topics & TLOs",
-        element: ManageTopicsPage,
         roles: [],
       },
     ],
