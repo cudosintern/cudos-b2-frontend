@@ -10,7 +10,7 @@ import DataTable from "../../../../components/Table/DataTable";
 import ConfirmDialog from "../../../../components/Dialog/ConfirmDialog";
 import { ApiEndpoint } from "../../../../utils/ApiEndpoint/emsapiEndpoint";
 import { BosMember } from "./responseInterface";
-import { getAllCurriculum } from "../../Curriculum/curriculum/curriculumSchema";
+import { getAllCurriculum } from "../../curriculum/curriculum/curriculumSchema";
 
 // --- INLINED API FUNCTIONS (Replicating bosApi to ensure stability) ---
 const getAllBos = async () => {
