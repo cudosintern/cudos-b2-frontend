@@ -14,6 +14,18 @@ import CiaAttainmentPage from "../pages/ioncudos/attainment/ciaAttainment/CiaAtt
 import CourseCoAttainmentPage from "../pages/ioncudos/attainment/courseCoAttainment/CourseCoAttainmentPage";
 import PoAttainmentPage from "../pages/ioncudos/attainment/poAttainment/PoAttainmentPage";
 import PsoFormPage from "../pages/ioncudos/curriculum/pso/PsoFormPage";
+import PeoPage from "../pages/ioncudos/curriculum/peo";
+import ManageKnowledgeProfile from "../pages/ioncudos/curriculum/manageKnowledgeProfile/ManageKnowledgeProfile";
+import ManageKnowledgeProfileForm from "../pages/ioncudos/curriculum/manageKnowledgeProfile/ManageKnowledgeProfileForm";
+import PoPeoMappingPage from "../pages/ioncudos/curriculum/poPeoMapping/PoPeoMappingPage";
+import CurriculumPage from "../pages/ioncudos/curriculum/curriculum/CurriculumPage";
+import CurriculumForm from "../pages/ioncudos/curriculum/curriculum/CurriculumForm";
+import PsoPage from "../pages/ioncudos/curriculum/pso";
+import CurriculumSettingsPage from "../pages/ioncudos/curriculum/curriculumSettings/CurriculumSettingsPage";
+import CompetenciesAndPIsPage from "../pages/ioncudos/curriculum/competenciesAndPIs/CompetenciesAndPIsPage";
+import CourseOutcomePage from "../pages/ioncudos/curriculum/courseOutcome/CourseOutcomePage";
+import CoPoMapPage from "../pages/ioncudos/curriculum/co_po_map";
+import ManageTopicsPage from "../pages/ioncudos/curriculum/manageTopics/ManageTopicsPage";
 
 // import Masters from "../pages/ems/configuration/masters/mastersPage";
 // import UserRolePage from "../pages/ems/configuration/userRole/userRolePage";
@@ -159,7 +171,7 @@ import FirstYearCourseCoAttainmentPage from "../pages/ioncudos/attainment/firstY
 import ConsolidatedPOAttainmentPage from "../pages/ioncudos/attainment/consolidatedPOAttainment/ConsolidatedPOAttainment";
 import CAYPOAttainmentPage from "../pages/ioncudos/attainment/CAYPOAttainment/CAYPOAttainment";
 
-import MTEAttainment from "../pages/ioncudos/attainment/mteCoAttainment";
+import MTEAttainment from "../pages/ioncudos/attainment/mteCOAttainment";
 
 export const EMSROUTE = [
   {
@@ -297,12 +309,12 @@ export const EMSROUTE = [
         element: genericKPPage,
         roles: [],
       },
-      {
-        name: "Delivery Method",
-        href: "delivery_method",
-        roles: [],
-        element: DeliveryMethodPage,
-      },
+      // {
+      //   name: "Delivery Method",
+      //   href: "delivery_method",
+      //   roles: [],
+      //   element: DeliveryMethodPage,
+      // },
       {
         name: "Lab Category",
         href: "labCategory",

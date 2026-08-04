@@ -9,3 +9,4 @@ export { default as MteChart } from './MteChart';
 export { default as MteMappedQuestionsModal } from './MteMappedQuestionsModal';
 export { default as MteDrilldownModal } from './MteDrilldownModal';
 export { default as MteExportButton } from './MteExportButton';
+export { default } from './MteCoAttainment';
