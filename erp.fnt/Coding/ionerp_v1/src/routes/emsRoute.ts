@@ -13,7 +13,20 @@ import AttainmentThresholdLevelsPage from "../pages/ioncudos/attainment/attainme
 import CiaAttainmentPage from "../pages/ioncudos/attainment/ciaAttainment/CiaAttainmentPage";
 import CourseCoAttainmentPage from "../pages/ioncudos/attainment/courseCoAttainment/CourseCoAttainmentPage";
 import PoAttainmentPage from "../pages/ioncudos/attainment/poAttainment/PoAttainmentPage";
-import PsoFormPage from "../pages/ioncudos/curriculum/pso/PsoFormPage";
+import PsoFormPage from "../pages/ioncudos/Curriculum/pso/PsoFormPage";
+import CurriculumPage from "../pages/ioncudos/Curriculum/curriculum/CurriculumPage";
+import CurriculumForm from "../pages/ioncudos/Curriculum/curriculum/CurriculumForm";
+import DeliveryMethodPage from "../pages/ioncudos/Curriculum/deliveryMethod/deliveryMethodPage";
+import ManageKnowledgeProfile from "../pages/ioncudos/Curriculum/manageKnowledgeProfile/ManageKnowledgeProfile";
+import ManageKnowledgeProfileForm from "../pages/ioncudos/Curriculum/manageKnowledgeProfile/ManageKnowledgeProfileForm";
+import PeoPage from "../pages/ioncudos/Curriculum/peo";
+import PsoPage from "../pages/ioncudos/Curriculum/pso";
+import PoPeoMappingPage from "../pages/ioncudos/Curriculum/poPeoMapping/PoPeoMappingPage";
+import CurriculumSettingsPage from "../pages/ioncudos/Curriculum/curriculumSettings/CurriculumSettingsPage";
+import CompetenciesAndPIsPage from "../pages/ioncudos/Curriculum/competenciesAndPIs/CompetenciesAndPIsPage";
+import CourseOutcomePage from "../pages/ioncudos/Curriculum/courseOutcome/CourseOutcomePage";
+import CoPoMapPage from "../pages/ioncudos/Curriculum/co_po_map/co_po_mapPage";
+import ManageTopicsPage from "../pages/ioncudos/Curriculum/manageTopics/ManageTopicsPage";
 
 // import Masters from "../pages/ems/configuration/masters/mastersPage";
 // import UserRolePage from "../pages/ems/configuration/userRole/userRolePage";
@@ -159,7 +172,7 @@ import FirstYearCourseCoAttainmentPage from "../pages/ioncudos/attainment/firstY
 import ConsolidatedPOAttainmentPage from "../pages/ioncudos/attainment/consolidatedPOAttainment/ConsolidatedPOAttainment";
 import CAYPOAttainmentPage from "../pages/ioncudos/attainment/CAYPOAttainment/CAYPOAttainment";
 
-import MTEAttainment from "../pages/ioncudos/attainment/mteCoAttainment";
+import { MteCoAttainmentPage as MTEAttainment } from "../pages/ioncudos/attainment/mteCOAttainment";
 
 export const EMSROUTE = [
   {

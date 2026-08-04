@@ -8,7 +8,7 @@ import { CUDOSROUTE } from "./cudosRoute";
 
 export interface RouteItem {
   name: string;
-  href: string;
+  href?: string;
   icon?: React.ReactNode;
   element: ComponentType<any>;
   subItems?: RouteItem[];
