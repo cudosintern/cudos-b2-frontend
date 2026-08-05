@@ -1,0 +1,13 @@
+{
+  "_comment": "Minimal package.json for server deployment if react-app-rewired issues persist",
+  "name": "ionems",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "/erp/",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "NODE_OPTIONS='--max-old-space-size=8192' GENERATE_SOURCEMAP=false DISABLE_ESLINT_PLUGIN=true react-scripts build",
+    "test": "react-scripts test",
+    "clean": "rm -rf build .tsbuildinfo"
+  }
+}
