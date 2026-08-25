@@ -164,7 +164,14 @@ import eCountentDevelopmentCertificationsPage from "../pages/ioncudos/facultyCon
 import FacultyReportsProfilePage from "../pages/ioncudos/reports/facultyReportsProfile/FacultyReportsProfilePage";
 import FacultyContributionDataPage from "../pages/ioncudos/reports/facultyContributionData/FacultyContributionDataPage";
 import DepartmentVisionMissionPage from "../pages/ioncudos/reports/departmentVisionMission/DepartmentVisionMissionPage";
-// import DepartmentCurriculumDetailsListPage from "../pages/ioncudos/reports/departmentCurriculumDetailsList/DepartmentCurriculumDetailsListPage";
+import DepartmentCurriculumDetailsListPage from "../pages/ioncudos/reports/departmentCurriculumDetailsList/DepartmentCurriculumDetailsListPage";
+import MappingReport from "../pages/ioncudos/reports/mappingReport/MappingReport";
+import StudentCourseEnrollmentListPage from "../pages/ioncudos/reports/studentCourseEnrollmentList/StudentCourseEnrollmentListPage";
+import CIATEEExaminationlistPage from "../pages/ioncudos/reports/CIATEEExamination/CIATEEExaminationlistPage";
+import UnmappedCompetenciesReportPage from "../pages/ioncudos/reports/unmappedCompetenciesReport/UnmappedCompetenciesReportPage";
+import UnmappedPerformanceIndicatorsReportPage from "../pages/ioncudos/reports/unmappedPerformanceIndicatorsReport/UnmappedPerformanceIndicatorsReportPage";
+import QuestionPaperAnalysisReportPage from "../pages/ioncudos/reports/questionPaperAnalysisReport/QuestionPaperAnalysisReportPage";
+import QuestionPaperAuditReportPage from "../pages/ioncudos/reports/questionPaperAuditReport/QuestionPaperAuditReportPage";
 
 // Import MTE CO Attainment page
 import MteCoAttainmentPage from "../pages/ioncudos/attainment/mteCOAttainment/MteCoAttainment";
@@ -1326,13 +1333,54 @@ export const EMSROUTE = [
         element: DepartmentVisionMissionPage,
         roles: [],
       },
-      // {
-      //   name: "Department / Curriculum Details List",
-      //   href: "/reports/department_curriculum_details_list",
-      //   element: DepartmentCurriculumDetailsListPage,
-      //   roles: [],
-      // },
-
+      {
+        name: "Department / Curriculum Details List",
+        href: "/reports/department_curriculum_details_list",
+        element: DepartmentCurriculumDetailsListPage,
+        roles: [],
+      },
+      {
+        name: "Mapping Report",
+        href: "/reports/mapping_report",
+        element: MappingReport,
+        roles: [],
+      },
+      {
+        name: "Student-Course Registered / Enrollment List",
+        href: "/reports/student_course_enrollment_list",
+        element: StudentCourseEnrollmentListPage,
+        roles: [],
+      },
+      {
+        name: "Continuous Internal Assessment (CIA) , Term End Examination (TEE) Report",
+        href: "/reports/cia_tee_exam",
+        element: CIATEEExaminationlistPage,
+        roles: [],
+      },
+      {
+        name: "Unmapped Competencies Report",
+        href: "/reports/unmapped_competencies_report",
+        element: UnmappedCompetenciesReportPage,
+        roles: [],
+      },
+      {
+        name: "Unmapped Performance Indicators (PIs) Report",
+        href: "/reports/unmapped_performance_indicators_report",
+        element: UnmappedPerformanceIndicatorsReportPage,
+        roles: [],
+      },
+      {
+        name: "Question Paper Analysis Report",
+        href: "/reports/question_paper_analysis_report",
+        element: QuestionPaperAnalysisReportPage,
+        roles: [],
+      },
+      {
+        name: "Question Paper Audit Report",
+        href: "/reports/question_paper_audit_report",
+        element: QuestionPaperAuditReportPage,
+        roles: [],
+      },
     ],
   },
 ];

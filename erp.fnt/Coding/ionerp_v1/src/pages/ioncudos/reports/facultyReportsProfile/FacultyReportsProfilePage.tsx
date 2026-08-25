@@ -258,7 +258,7 @@ const FacultyReportsProfilePage = () => {
     <div className="min-h-screen bg-[#efefef] p-2">
       <div className="border bg-white shadow">
         {/* Header */}
-        <div className="text-[#4f7f82] px-4 py-2 font-bold text-lg rounded-t">
+        <div className="text-[#4f7f82] px-4 py-2 font-bold text-lg rounded-t border border-[#d9d9d9]">
           Faculty Profile
         </div>
 
@@ -305,7 +305,7 @@ const FacultyReportsProfilePage = () => {
           {/* Export Button */}
           {selectedDept && selectedUser && (
             <div className="relative group">
-              <button className="bg-green-600 hover:bg-green-700 text-white text-sm px-4 py-1 rounded">
+              <button className="bg-[#4f7f82] hover:bg-[#4f7f82] text-white text-sm px-4 py-1 rounded">
                 Export
               </button>
 
@@ -1565,7 +1565,7 @@ const FacultyReportsProfilePage = () => {
         {selectedDept && selectedUser && (
           <div className="border-t border-gray-300 mt-4 pt-4 flex justify-end">
             <div className="relative group">
-              <button className="bg-green-600 hover:bg-green-700 m-2 text-white text-sm px-4 py-2 rounded">
+              <button className="bg-[#4f7f82] hover:bg-[#4f7f82] m-2 text-white text-sm px-4 py-2 rounded">
                 Export
               </button>
 

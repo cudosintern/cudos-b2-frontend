@@ -135,7 +135,7 @@ const FacultyContributionDataPage: React.FC = () => {
     <div className="p-4 bg-gray-100 min-h-screen">
       <div className="bg-white p-6 rounded-md shadow-sm">
         {/* Header */}
-        <div className="text-[#4f7f82] mb-6">
+        <div className="text-[#4f7f82] mb-6 border-b border-[#d9d9d9]">
           <h2 className="text-lg font-semibold">Faculty Contribution Data</h2>
         </div>
 
@@ -168,7 +168,7 @@ const FacultyContributionDataPage: React.FC = () => {
           {reportData.length > 0 && (
             <button
               onClick={handleExportExcel}
-              className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
+              className="bg-[#4f7f82] text-white px-4 py-2 rounded hover:bg-[#4f7f82]"
             >
               Export .xlsx
             </button>
@@ -322,7 +322,7 @@ const FacultyContributionDataPage: React.FC = () => {
           <div className="border-t border-gray-300 mt-4 pt-4 flex justify-end">
             <button
               onClick={handleExportExcel}
-              className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
+              className="bg-[#4f7f82] text-white px-4 py-2 rounded hover:bg-[#4f7f82]"
             >
               Export .xlsx
             </button>

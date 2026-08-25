@@ -91,7 +91,7 @@ const DepartmentVisionMissionPage = () => {
     <div className="min-h-screen bg-[#efefef] p-4">
       <div className="bg-white border border-gray-300 rounded shadow-sm">
         {/* HEADER */}
-        <div className="text-[#4f7f82] px-6 py-3 rounded-t justify-between items-center">
+        <div className="text-[#4f7f82] px-6 py-3 rounded-t justify-between items-center border border-[#d9d9d9]">
           <h2 className="text-[18px] font-semibold">
             Department Vision & Mission Report
           </h2>
@@ -145,7 +145,7 @@ const DepartmentVisionMissionPage = () => {
           {/* EXPORT (HIDDEN UNTIL BOTH SELECTED) */}
           {showReport && (
             <div className="relative group">
-              <button className="bg-green-600 hover:bg-green-700 text-white text-sm px-4 py-1 rounded">
+              <button className="bg-[#4f7f82] hover:bg-[#4f7f82] text-white text-sm px-4 py-1 rounded">
                 Export
               </button>
 
@@ -230,7 +230,7 @@ const DepartmentVisionMissionPage = () => {
         {showReport && (
           <div className="px-6 pb-4 flex justify-end">
             <div className="relative group">
-              <button className="bg-green-600 hover:bg-green-700 text-white text-sm px-4 py-1 rounded">
+              <button className="bg-[#4f7f82] hover:bg-[#4f7f82] text-white text-sm px-4 py-1 rounded">
                 Export
               </button>
 
